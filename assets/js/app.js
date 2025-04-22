@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="aluno-info">
         <img src="assets/img/filmes/perfil.jpg" alt="Foto do Aluno">
         <div>
-          <p>Nome: João Pedro Campos Curso: Ciências da Computação Matrícula: 891100</p>
+          <p>Nome: João Pedro Campos | Curso: Ciências da Computação | Matrícula: 891100</p>
         </div>
       </div>
     `;
