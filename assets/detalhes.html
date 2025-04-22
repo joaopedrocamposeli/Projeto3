@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Filme - CineCatalog</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container">
+      <div class="cabecalho-logo">
+        <img src="assets/img/logos/logo.png" alt="CineCatalog">
+        <h1>CineCatalog</h1>
+      </div>
+      <nav class="cabecalho-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Filmes</a></li>
+          <li><a href="#">Séries</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="detalhes-filme">
+    <div class="container">
+      <div class="filme-principal">
+        <div class="filme-poster">
+          <img id="detalhe-imagem" src="" alt="Poster do Filme">
+        </div>
+        <div class="filme-info">
+          <h1 id="detalhe-titulo"></h1>
+          <div class="filme-metadata">
+            <span id="detalhe-categoria" class="filme-categoria"></span>
+            <span id="detalhe-ano" class="filme-ano"></span>
+            <span id="detalhe-avaliacao" class="filme-avaliacao"></span>
+          </div>
+          <p id="detalhe-descricao" class="filme-descricao"></p>
+          <div class="filme-detalhes">
+            <p><strong>Diretor:</strong> <span id="detalhe-diretor"></span></p>
+            <p><strong>Duração:</strong> 120 min</p>
+            <p><strong>Elenco:</strong> Ator 1, Atriz 2, Ator 3</p>
+          </div>
+          <button id="btn-favorito" class="btn-favorito"></button>
+        </div>
+      </div>
+
+      <div class="filme-conteudo">
+        <h2>Sinopse</h2>
+        <p id="detalhe-conteudo"></p>
+      </div>
+
+      <div class="filme-trailer">
+        <h2>Trailer</h2>
+        <div class="trailer-container">
+          <iframe id="detalhe-trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="filme-galeria">
+        <h2>Galeria</h2>
+        <div class="galeria-container" id="galeria-filme"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-info">
+        <div class="rodape-logo">
+          <img src="assets/img/logos/logo.png" alt="CineCatalog">
+          <p>O melhor catálogo de filmes online</p>
+        </div>
+        <div class="rodape-links">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Séries</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+        <div class="rodape-contato">
+          <h3>Contato</h3>
+          <p><i class="fas fa-envelope"></i> contato@cinecatalog.com</p>
+          <p><i class="fas fa-phone"></i> (11) 98765-4321</p>
+        </div>
+      </div>
+      <div class="rodape-copyright">
+        <p>&copy; 2023 CineCatalog. Todos os direitos reservados.</p>
+        <div class="rodape-redes">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -11,9 +11,9 @@ const dados = {
       destaque: true,
       data: "1972",
       trailer: "https://youtu.be/0v6MO0EB7UY",
-      imagem_principal: "images/Godfather.jpg",
+      imagem_principal: "img/Godfather.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/poderosochefao-01.jpg" }
+        { id: 1, src: "img/poderosochefao-01.jpg" }
       ],
       avaliacao: {
         media: 4.8,
@@ -30,9 +30,9 @@ const dados = {
       destaque: true,
       data: "2025",
       trailer: "https://youtu.be/EVKYAAES6JQ",
-      imagem_principal: "images/minecraft.jpg",
+      imagem_principal: "img/minecraft.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/minecraft-01.jpg", }
+        { id: 1, src: "img/minecraft-01.jpg", }
       ],
       avaliacao: {
         media: 4.7,
@@ -49,9 +49,9 @@ const dados = {
       destaque: true,
       data: "2014",
       trailer: "https://youtu.be/BYUZhddDbdc7E",
-      imagem_principal: "images/interestelar.jpg",
+      imagem_principal: "img/interestelar.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/interestelar-01.jpg", descricao: "Cooper na nave" }
+        { id: 1, src: "img/interestelar-01.jpg", descricao: "Cooper na nave" }
       ],
       avaliacao: {
         media: 4.9,
@@ -68,9 +68,9 @@ const dados = {
       destaque: false,
       data: "2019",
       trailer: "https://youtu.be/ruaBfQWvHKI",
-      imagem_principal: "images/parasita.jpg",
+      imagem_principal: "img/parasita.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/parasita-01.jpg", descricao: "Família Kim" }
+        { id: 1, src: "img/parasita-01.jpg", descricao: "Família Kim" }
       ],
       avaliacao: {
         media: 4.6,
@@ -87,9 +87,9 @@ const dados = {
       destaque: false,
       data: "1999",
       trailer: "https://youtu.be/eBKvlCf0B4g",
-      imagem_principal: "images/clubedaluta.jpg",
+      imagem_principal: "img/clubedaluta.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/clubedalutab-01.jpg", descricao: "Tyler e Jack" }
+        { id: 1, src: "img/clubedalutab-01.jpg", descricao: "Tyler e Jack" }
       ],
       avaliacao: {
         media: 4.7,
@@ -106,9 +106,9 @@ const dados = {
       destaque: true,
       data: "2003",
       trailer: "https://youtu.be/LiKeQrChkTY",
-      imagem_principal: "images/senhoraneis.jpg",
+      imagem_principal: "img/senhoraneis.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/senhoraneis-01.jpg", descricao: "Frodo e Sam" }
+        { id: 1, src: "img/senhoraneis-01.jpg", descricao: "Frodo e Sam" }
       ],
       avaliacao: {
         media: 4.9,
@@ -125,9 +125,9 @@ const dados = {
       destaque: false,
       data: "1994",
       trailer: "https://youtu.be/YBZp3tkua2Y",
-      imagem_principal: "images/pulp.jpg",
+      imagem_principal: "img/pulp.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/pulp-01.jpg", descricao: "Vincent e Jules" }
+        { id: 1, src: "img/pulp-01.jpg", descricao: "Vincent e Jules" }
       ],
       avaliacao: {
         media: 4.8,
@@ -144,9 +144,9 @@ const dados = {
       destaque: true,
       data: "2002",
       trailer: "https://youtu.be/fZJUKixyeXM",
-      imagem_principal: "images/cidadededeus.jpg",
+      imagem_principal: "img/cidadededeus.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/cidadededeus-01.jpg", descricao: "Zé Pequeno" }
+        { id: 1, src: "img/cidadededeus-01.jpg", descricao: "Zé Pequeno" }
       ],
       avaliacao: {
         media: 4.9,
@@ -163,9 +163,9 @@ const dados = {
       destaque: false,
       data: "1999",
       trailer: "https://youtu.be/mPYfd6PCmYY",
-      imagem_principal: "images/matrix.jpg",
+      imagem_principal: "img/matrix.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/matrix-01.jpg", descricao: "Neo e Morpheus" }
+        { id: 1, src: "img/matrix-01.jpg", descricao: "Neo e Morpheus" }
       ],
       avaliacao: {
         media: 4.7,
@@ -182,9 +182,9 @@ const dados = {
       destaque: true,
       data: "1997",
       trailer: "https://youtu.be/IH6_CA_ocqY",
-      imagem_principal: "images/titanic.jpg",
+      imagem_principal: "img/titanic.jpg",
       imagens_complementares: [
-        { id: 1, src: "images/titanic-01.jpg", descricao: "Jack e Rose" }
+        { id: 1, src: "img/titanic-01.jpg", descricao: "Jack e Rose" }
       ],
       avaliacao: {
         media: 4.5,
@@ -214,147 +214,167 @@ function atualizarIconeFavorito(id) {
   const btn = document.querySelector(`.btn-favorito[data-id="${id}"]`);
   if (btn) {
     btn.className = favoritos.includes(id) ? 
-      'btn btn-danger btn-favorito' : 
-      'btn btn-outline-danger btn-favorito';
+      'btn-favorito ativo' : 
+      'btn-favorito';
     btn.innerHTML = favoritos.includes(id) ? 
-      '<i class="bi bi-heart-fill"></i>' : 
-      '<i class="bi bi-heart"></i>';
+      '❤️ Remover Favorito' : 
+      '🤍 Adicionar Favorito';
   }
 }
 
-// Filtro por Gênero
-function carregarGeneros() {
-  const select = document.getElementById('filtro-genero');
-  const generos = [...new Set(dados.filmes.map(f => f.categoria))];
+// Carrossel de Destaques
+function carregarDestaques() {
+  const destaques = dados.filmes.filter(f => f.destaque);
+  const container = document.querySelector('.carrossel-container');
   
-  generos.forEach(genero => {
-    const option = document.createElement('option');
-    option.value = genero;
-    option.textContent = genero;
-    select.appendChild(option);
-  });
-
-  select.addEventListener('change', () => {
-    const genero = select.value;
-    const filmes = genero ? dados.filmes.filter(f => f.categoria === genero) : dados.filmes;
-    renderizarFilmes(filmes);
-  });
+  if (container && destaques.length > 0) {
+    container.innerHTML = destaques.map((filme, index) => `
+      <div class="carrossel-item ${index === 0 ? 'ativo' : ''}">
+        <img src="${filme.imagem_principal}" alt="${filme.titulo}">
+        <div class="carrossel-info">
+          <h3>${filme.titulo}</h3>
+          <p>${filme.descricao}</p>
+          <a href="detalhes.html?id=${filme.id}" class="btn-carrossel">Ver Detalhes</a>
+        </div>
+      </div>
+    `).join('');
+    
+    // Controles do carrossel
+    container.insertAdjacentHTML('afterend', `
+      <button class="carrossel-controle anterior">❮</button>
+      <button class="carrossel-controle proximo">❯</button>
+    `);
+    
+    // Event listeners para controles
+    document.querySelectorAll('.carrossel-controle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const direction = btn.classList.contains('anterior') ? -1 : 1;
+        navegarCarrossel(direction);
+      });
+    });
+  }
 }
 
-// Renderização de Filmes
-function renderizarFilmes(filmes) {
+function navegarCarrossel(direction) {
+  const items = document.querySelectorAll('.carrossel-item');
+  const ativo = document.querySelector('.carrossel-item.ativo');
+  let novoIndex = [...items].indexOf(ativo) + direction;
+  
+  if (novoIndex < 0) novoIndex = items.length - 1;
+  if (novoIndex >= items.length) novoIndex = 0;
+  
+  ativo.classList.remove('ativo');
+  items[novoIndex].classList.add('ativo');
+}
+
+// Listagem de Filmes
+function carregarFilmes() {
   const container = document.getElementById('filmes-container');
   const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
   
-  container.innerHTML = filmes.map(filme => `
-    <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-      <div class="card card-film h-100">
-        <img src="${filme.imagem_principal}" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">${filme.titulo}</h5>
-          <span class="badge bg-primary">${filme.categoria}</span>
-          <a href="detalhes.html?id=${filme.id}" class="btn btn-outline-primary w-100 mt-2">Detalhes</a>
-        </div>
-        <div class="card-footer bg-transparent">
-          <button class="btn btn-sm btn-favorito ${favoritos.includes(filme.id) ? 'btn-danger' : 'btn-outline-danger'}" 
-                  data-id="${filme.id}" 
-                  onclick="toggleFavorito(${filme.id})">
-            <i class="bi ${favoritos.includes(filme.id) ? 'bi-heart-fill' : 'bi-heart'}"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-// Carregar Detalhes do Filme
-function carregarDetalhes() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = parseInt(urlParams.get('id'));
-  const filme = dados.filmes.find(f => f.id === id);
-  const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-
-  if (filme) {
-    const container = document.getElementById('detalhes-container');
-    container.innerHTML = `
-      <div class="col-lg-6">
-        <img src="${filme.imagem_principal}" class="img-fluid rounded mb-4">
-        <div class="row g-2">
-          ${filme.imagens_complementares.map(img => `
-            <div class="col-4">
-              <img src="${img.src}" class="img-thumbnail w-100" alt="${img.descricao}">
-            </div>
-          `).join('')}
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <h1>${filme.titulo}</h1>
-        
-        <!-- Avaliação -->
-        <div class="avaliacao my-3">
-          <h5>Avaliação: ${filme.avaliacao.media.toFixed(1)}/5</h5>
-          <div class="stars">
-            ${[1, 2, 3, 4, 5].map(i => `
-              <i class="bi bi-star${i <= Math.floor(filme.avaliacao.media) ? '-fill' : ''}"></i>
-            `).join('')}
-            <small>(${filme.avaliacao.total} avaliações)</small>
+  if (container) {
+    container.innerHTML = dados.filmes.map(filme => `
+      <div class="filme">
+        <img src="${filme.imagem_principal}" alt="${filme.titulo}">
+        <div class="filme-info">
+          <h3>${filme.titulo}</h3>
+          <p class="filme-descricao">${filme.descricao}</p>
+          <div class="filme-metadata">
+            <span class="filme-categoria">${filme.categoria}</span>
+            <span class="filme-ano">${filme.data}</span>
           </div>
-        </div>
-        
-        <button class="btn ${favoritos.includes(filme.id) ? 'btn-danger' : 'btn-outline-danger'} mb-3" 
-                onclick="toggleFavorito(${filme.id})">
-          <i class="bi ${favoritos.includes(filme.id) ? 'bi-heart-fill' : 'bi-heart'}"></i>
-          ${favoritos.includes(filme.id) ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos'}
-        </button>
-        
-        <p><strong>Diretor:</strong> ${filme.diretor}</p>
-        <p><strong>Gênero:</strong> ${filme.categoria}</p>
-        <p><strong>Ano:</strong> ${filme.data}</p>
-        
-        <div class="mt-4">
-          <h4>Sinopse</h4>
-          <p>${filme.conteudo}</p>
-        </div>
-        
-        <div class="mt-4">
-          <h4>Trailer</h4>
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/${filme.trailer}" allowfullscreen></iframe>
+          <div class="filme-acoes">
+            <a href="detalhes.html?id=${filme.id}" class="btn-detalhes">Ver Detalhes</a>
+            <button class="btn-favorito ${favoritos.includes(filme.id) ? 'ativo' : ''}" 
+                    data-id="${filme.id}" 
+                    onclick="toggleFavorito(${filme.id})">
+              ${favoritos.includes(filme.id) ? '❤️ Remover Favorito' : '🤍 Adicionar Favorito'}
+            </button>
           </div>
         </div>
       </div>
-    `;
-  } else {
-    window.location.href = 'index.html';
+    `).join('');
   }
 }
 
-// Carregar Destaques (Carrossel)
-function carregarDestaques() {
-  const destaques = dados.filmes.filter(f => f.destaque);
-  const carousel = document.getElementById('carousel-inner');
+// Página de Detalhes
+function carregarDetalhes() {
+  const id = new URLSearchParams(window.location.search).get('id');
+  const filme = dados.filmes.find(f => f.id == id);
   
-  destaques.forEach((filme, i) => {
-    const item = document.createElement('div');
-    item.className = `carousel-item ${i === 0 ? 'active' : ''}`;
-    item.innerHTML = `
-      <img src="${filme.imagem_principal}" class="d-block w-100" style="height: 500px; object-fit: cover;">
-      <div class="carousel-caption">
-        <h3>${filme.titulo}</h3>
-        <a href="detalhes.html?id=${filme.id}" class="btn btn-primary">Ver Detalhes</a>
-      </div>
+  if (filme) {
+    // Informações principais
+    document.getElementById('detalhe-titulo').textContent = filme.titulo;
+    document.getElementById('detalhe-descricao').textContent = filme.descricao;
+    document.getElementById('detalhe-conteudo').textContent = filme.conteudo;
+    document.getElementById('detalhe-imagem').src = filme.imagem_principal;
+    document.getElementById('detalhe-categoria').textContent = filme.categoria;
+    document.getElementById('detalhe-diretor').textContent = filme.diretor;
+    document.getElementById('detalhe-ano').textContent = filme.data;
+    
+    // Avaliação
+    const avaliacao = document.getElementById('detalhe-avaliacao');
+    avaliacao.innerHTML = `
+      ${'★'.repeat(Math.floor(filme.avaliacao.media))}${'☆'.repeat(5 - Math.floor(filme.avaliacao.media))}
+      (${filme.avaliacao.total} avaliações)
     `;
-    carousel.appendChild(item);
-  });
+    
+    // Trailer
+    const trailer = document.getElementById('detalhe-trailer');
+    if (trailer) {
+      trailer.src = `https://www.youtube.com/embed/${filme.trailer}`;
+    }
+    
+    // Favorito
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    const btnFavorito = document.getElementById('btn-favorito');
+    if (btnFavorito) {
+      btnFavorito.className = favoritos.includes(filme.id) ? 'btn-favorito ativo' : 'btn-favorito';
+      btnFavorito.innerHTML = favoritos.includes(filme.id) ? 
+        '❤️ Remover Favorito' : 
+        '🤍 Adicionar Favorito';
+      btnFavorito.onclick = () => toggleFavorito(filme.id);
+    }
+    
+    // Galeria
+    const galeria = document.getElementById('galeria-filme');
+    if (galeria && filme.imagens_complementares.length > 0) {
+      galeria.innerHTML = filme.imagens_complementares.map(img => `
+        <div class="galeria-item">
+          <img src="${img.src}" alt="${img.descricao}">
+          <p>${img.descricao}</p>
+        </div>
+      `).join('');
+    }
+  } else {
+    // Filme não encontrado, redirecionar
+    window.location.href = 'index.html';
+  }
 }
 
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('detalhes.html')) {
     carregarDetalhes();
-  } else if (window.location.pathname.includes('index.html')) {
-    carregarGeneros();
+  } else {
     carregarDestaques();
-    renderizarFilmes(dados.filmes);
+    carregarFilmes();
+  }
+  
+  // Seção sobre o aluno
+  const sobreAluno = document.querySelector('.sobre-aluno');
+  if (sobreAluno) {
+    sobreAluno.innerHTML = `
+      <h2>Sobre o Autor</h2>
+      <div class="aluno-info">
+        <img src="assets/img/aluno.jpg" alt="Foto do Aluno">
+        <div>
+          <p>Meu nome é João Pedro Campos, sou estudante de Sistemas de Informação e desenvolvi este 
+          catálogo de filmes como parte do Trabalho Prático 1.</p>
+          <p>Este projeto utiliza HTML, CSS e JavaScript puro para criar uma experiência 
+          responsiva e dinâmica.</p>
+        </div>
+      </div>
+    `;
   }
 });
