@@ -11,9 +11,9 @@ const dados = {
       destaque: true,
       data: "1972",
       trailer: "https://youtu.be/0v6MO0EB7UY",
-      imagem_principal: "img/Godfather.jpg",
+      imagem_principal: "assets/img/filmes/Godfather.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/poderosochefao-01.jpg" }
+        { id: 1, src: "assets/img/filmes/poderosochefao-01.jpg" }
       ],
       avaliacao: {
         media: 4.8,
@@ -30,9 +30,9 @@ const dados = {
       destaque: true,
       data: "2025",
       trailer: "https://youtu.be/EVKYAAES6JQ",
-      imagem_principal: "img/minecraft.jpg",
+      imagem_principal: "assets/img/filmes/minecraft.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/minecraft-01.jpg", }
+        { id: 1, src: "assets/img/filmes/minecraft-01.jpg", }
       ],
       avaliacao: {
         media: 4.7,
@@ -49,9 +49,9 @@ const dados = {
       destaque: true,
       data: "2014",
       trailer: "https://youtu.be/BYUZhddDbdc7E",
-      imagem_principal: "img/interestelar.jpg",
+      imagem_principal: "assets/img/filmes/interestelar.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/interestelar-01.jpg", descricao: "Cooper na nave" }
+        { id: 1, src: "assets/img/filmes/interestelar-01.jpg", descricao: "Cooper na nave" }
       ],
       avaliacao: {
         media: 4.9,
@@ -68,9 +68,9 @@ const dados = {
       destaque: false,
       data: "2019",
       trailer: "https://youtu.be/ruaBfQWvHKI",
-      imagem_principal: "img/parasita.jpg",
+      imagem_principal: "assets/img/filmes/parasita.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/parasita-01.jpg", descricao: "Família Kim" }
+        { id: 1, src: "assets/img/filmes/parasita-01.jpg", descricao: "Família Kim" }
       ],
       avaliacao: {
         media: 4.6,
@@ -87,9 +87,9 @@ const dados = {
       destaque: false,
       data: "1999",
       trailer: "https://youtu.be/eBKvlCf0B4g",
-      imagem_principal: "img/clubedaluta.jpg",
+      imagem_principal: "assets/img/filmes/clubedaluta.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/clubedalutab-01.jpg", descricao: "Tyler e Jack" }
+        { id: 1, src: "assets/img/filmes/clubedalutab-01.jpg", descricao: "Tyler e Jack" }
       ],
       avaliacao: {
         media: 4.7,
@@ -106,9 +106,9 @@ const dados = {
       destaque: true,
       data: "2003",
       trailer: "https://youtu.be/LiKeQrChkTY",
-      imagem_principal: "img/senhoraneis.jpg",
+      imagem_principal: "assets/img/filmes/senhoraneis.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/senhoraneis-01.jpg", descricao: "Frodo e Sam" }
+        { id: 1, src: "assets/img/filmes/senhoraneis-01.jpg", descricao: "Frodo e Sam" }
       ],
       avaliacao: {
         media: 4.9,
@@ -125,9 +125,9 @@ const dados = {
       destaque: false,
       data: "1994",
       trailer: "https://youtu.be/YBZp3tkua2Y",
-      imagem_principal: "img/pulp.jpg",
+      imagem_principal: "assets/img/filmes/pulp.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/pulp-01.jpg", descricao: "Vincent e Jules" }
+        { id: 1, src: "assets/img/filmes/pulp-01.jpg", descricao: "Vincent e Jules" }
       ],
       avaliacao: {
         media: 4.8,
@@ -144,9 +144,9 @@ const dados = {
       destaque: true,
       data: "2002",
       trailer: "https://youtu.be/fZJUKixyeXM",
-      imagem_principal: "img/cidadededeus.jpg",
+      imagem_principal: "assets/img/filmes/cidadededeus.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/cidadededeus-01.jpg", descricao: "Zé Pequeno" }
+        { id: 1, src: "assets/img/filmes/cidadededeus-01.jpg", descricao: "Zé Pequeno" }
       ],
       avaliacao: {
         media: 4.9,
@@ -163,9 +163,9 @@ const dados = {
       destaque: false,
       data: "1999",
       trailer: "https://youtu.be/mPYfd6PCmYY",
-      imagem_principal: "img/matrix.jpg",
+      imagem_principal: "assets/img/filmes/matrix.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/matrix-01.jpg", descricao: "Neo e Morpheus" }
+        { id: 1, src: "assets/img/filmes/matrix-01.jpg", descricao: "Neo e Morpheus" }
       ],
       avaliacao: {
         media: 4.7,
@@ -182,9 +182,9 @@ const dados = {
       destaque: true,
       data: "1997",
       trailer: "https://youtu.be/IH6_CA_ocqY",
-      imagem_principal: "img/titanic.jpg",
+      imagem_principal: "assets/img/filmes/titanic.jpg",
       imagens_complementares: [
-        { id: 1, src: "img/titanic-01.jpg", descricao: "Jack e Rose" }
+        { id: 1, src: "assets/img/filmes/titanic-01.jpg", descricao: "Jack e Rose" }
       ],
       avaliacao: {
         media: 4.5,
@@ -239,13 +239,13 @@ function carregarDestaques() {
       </div>
     `).join('');
     
-    // Controles do carrossel
+    
     container.insertAdjacentHTML('afterend', `
       <button class="carrossel-controle anterior">❮</button>
       <button class="carrossel-controle proximo">❯</button>
     `);
     
-    // Event listeners para controles
+    
     document.querySelectorAll('.carrossel-controle').forEach(btn => {
       btn.addEventListener('click', () => {
         const direction = btn.classList.contains('anterior') ? -1 : 1;
@@ -361,18 +361,14 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarFilmes();
   }
   
-  // Seção sobre o aluno
   const sobreAluno = document.querySelector('.sobre-aluno');
   if (sobreAluno) {
     sobreAluno.innerHTML = `
       <h2>Sobre o Autor</h2>
       <div class="aluno-info">
-        <img src="assets/img/aluno.jpg" alt="Foto do Aluno">
+        <img src="assets/img/filmes/perfil.jpg" alt="Foto do Aluno">
         <div>
-          <p>Meu nome é João Pedro Campos, sou estudante de Sistemas de Informação e desenvolvi este 
-          catálogo de filmes como parte do Trabalho Prático 1.</p>
-          <p>Este projeto utiliza HTML, CSS e JavaScript puro para criar uma experiência 
-          responsiva e dinâmica.</p>
+          <p>Nome: João Pedro Campos Curso: Ciências da Computação Matrícula: 891100</p>
         </div>
       </div>
     `;
