@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+
 :root {
   --cor-primaria: #e50914;
   --cor-secundaria: #141414;
@@ -28,7 +28,7 @@ body {
   padding: 0 20px;
 }
 
-/* Cabeçalho */
+
 .cabecalho {
   background-color: var(--cor-secundaria);
   padding: 15px 0;
@@ -145,7 +145,6 @@ body {
   border-color: var(--cor-primaria);
 }
 
-/* Carrossel */
 .carrossel-destaques {
   position: relative;
   margin-bottom: 40px;
@@ -241,7 +240,7 @@ body {
   right: 20px;
 }
 
-/* Lista de Filmes */
+
 .lista-filmes {
   padding: 40px 0;
 }
@@ -360,7 +359,7 @@ body {
   background-color: #f40612;
 }
 
-/* Página de Detalhes */
+
 .detalhes-filme {
   padding: 40px 0;
 }
@@ -478,7 +477,7 @@ body {
   color: var(--cor-texto-secundario);
 }
 
-/* Sobre o Aluno */
+
 .sobre-aluno {
   padding: 40px 0;
   background-color: var(--cor-fundo-secundario);
@@ -507,7 +506,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* Rodapé */
+
 .rodape {
   background-color: var(--cor-secundaria);
   padding: 40px 0 20px;
@@ -589,7 +588,6 @@ body {
   color: var(--cor-primaria);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .cabecalho .container {
     flex-direction: column;
