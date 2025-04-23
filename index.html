@@ -21,24 +21,24 @@
           <li><a href="#">Séries</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
-        <div class="filtros-container">
-          
-          <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Pesquisar filmes...">
-            <button id="searchButton"><i class="fas fa-search"></i></button>
-          </div>
-          
-          
-          <div class="genre-filter">
-            <select id="genreSelect">
-              <option value="">Todos os gêneros</option>
-              <!-- Os gêneros serão preenchidos pelo JavaScript -->
-            </select>
-          </div>
-        </div>
       </nav>
     </div>
   </header>
+  <section class="filtros">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Pesquisar filmes..." class="search-input">
+      <button id="searchBtn" class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+    
+    <div class="filter-container">
+      <select id="genreFilter" class="genre-select">
+        <option value="">Todos os gêneros</option>
+  
+      </select>
+    </div>
+  </section>
 
   <main class="conteudo-principal">
     <section class="carrossel-destaques">

@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sobreAluno = document.querySelector('.sobre-aluno');
   if (sobreAluno) {
     sobreAluno.innerHTML = `
-      <h2>Sobre o Autor</h2>
+      <h2>Informações Pessoais</h2>
       <div class="aluno-info">
         <img src="assets/img/filmes/perfil.jpg" alt="Foto do Aluno">
         <div>
